@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your App</title>
-  <link rel="stylesheet" type="text/css" href="/css/remake.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body>
   {{#if currentUser}}
@@ -30,8 +30,11 @@
   {{> yield }}
   {{#if isPageAuthor}}
     {{!-- Prevent loading the Remake framework if the page isn't editable --}}
-    <script src="/js/remake-init.js"></script>
+    <script src="/assets/js/vendor/Sortable.min.js"></script>
+    <script src="/assets/js/vendor/crostini.min.js"></script>
+    <script src="/remake/js/remake.min.js"></script>
+    <script src="/assets/js/remake-init.js"></script>
   {{/if}}
-  <script src="/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
